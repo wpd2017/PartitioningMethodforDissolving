@@ -1,0 +1,32 @@
+﻿<MapGeneBatchProcessing>
+  	<RelativePath>C:\Users\Administrator\Desktop\论文修改\paper_test\data_test2\testdata</RelativePath>
+	<WriteToConsole>true</WriteToConsole>
+	
+	<Mission id="302" note="裁剪边界修正">
+		<ParaIn>
+			<Layers note="SourceDataStore">
+				<FilePath small="true">narrowPatch.shp</FilePath>
+				<FilePath clip="true">grid_repair.shp</FilePath>
+			</Layers>
+			<Parameter>
+				<GridNumber note="格网数目">2,2</GridNumber>
+				<GridSize note="格网大小（长宽）">0,0</GridSize>
+				<GridOrigin note="格网起算点">0,0</GridOrigin>
+				<GridMode note="格网生成模式：1-依据格网数目 2-依据格网高宽 4-依据格网高宽加起始点 8-依据格网高宽加起始点和格网取整性">1</GridMode>
+				<ProcessMode note="处理模式：1-格网修正 2-非格网修正 4-格网生成">2</ProcessMode>
+				<AmendBuffer note="缓冲阈值">20</AmendBuffer>
+				<Scale note="比例尺">0</Scale>
+				<FuzzyTolerance note="拓扑参数">0.001</FuzzyTolerance>
+				<IntersectionEpsilon note="线段相交容差">0.00001</IntersectionEpsilon>
+				<RedundancyVertexTolerance note="弧段冗余节点容差">0.001</RedundancyVertexTolerance>
+				<TesselationMode note="图斑或面要素铺盖模式">true</TesselationMode>
+			</Parameter>
+		</ParaIn>
+		<ParaOut>
+			<Layers note="DstDataStores">
+				<FilePath editable="true">grid_amend.shp</FilePath>
+			</Layers>
+		</ParaOut>
+	</Mission>
+	
+</MapGeneBatchProcessing>

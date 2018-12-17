@@ -1,0 +1,29 @@
+﻿<MapGeneBatchProcessing>
+  	<RelativePath>C:\Users\Administrator\Desktop\论文修改\paper_test\data_test2\testdata</RelativePath>
+	<WriteToConsole>true</WriteToConsole>
+	
+	<Mission id="301" note="格网块拆合">
+		<ParaIn>
+			<Layers note="BlockDataStore">
+				<FilePath>grid25.shp</FilePath>
+			</Layers>
+			<Layers note="NarrowDataStore">
+				<FilePath>narrowPatch.shp</FilePath>
+			</Layers>
+			<Layers note="PatchDataStore">
+				<FilePath>unNarrowPatch.shp</FilePath>
+			</Layers>
+			<Parameter>
+				<BlockCount note="格网块数量">25</BlockCount>
+				<SplitEpsilon note="格网块拆分阈值">1.5</SplitEpsilon>
+				<MergeEpsilon note="格网块合并阈值">0.5</MergeEpsilon>
+			</Parameter>
+		</ParaIn>
+		<ParaOut>
+			<Layers note="DstDataStores">
+				<FilePath editable="true">grid_repair.shp</FilePath>
+			</Layers>
+		</ParaOut>
+	</Mission>
+	
+</MapGeneBatchProcessing>
